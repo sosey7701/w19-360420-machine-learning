@@ -14,6 +14,7 @@ public class kNNMain{
 	List<DataPoint> dataSet = DataSet.readDataSet(args[0]);
 	
 	DataPoint point = dataSet.get(0);
+	DataPoint point2 = dataSet.get(1);
 	
 	System.out.println(point.getLabel());
 	
@@ -32,14 +33,13 @@ public class kNNMain{
 
 
 
-    // TASK 4: write a new method in DataSet.java which takes as arguments to DataPoint objects,
+    // TASK 4: write a new method in DataSet.java which takes as arguments two DataPoint objects,
     // and returns the Euclidean distance between those two points (as a double)
-
 
 
     // TASK 5: Use the KNNClassifier class to determine the k nearest neighbors to a given DataPoint,
     // and make a print a predicted target label
-
+	KNNClassifier knn = new KNNClassifier(3);
 
 
     // TASK 6: loop over the datapoints in the held out test set, and make predictions for Each

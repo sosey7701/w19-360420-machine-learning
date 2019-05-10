@@ -252,5 +252,18 @@ public class DataSet {
 
   ////////////////////////////////////////////////////////////////////////////
 
-
+	public static double distanceEuclid(DataPoint point1, DataPoint point2) {
+		
+		double distance = 0.;
+		double sum = 0;
+		
+		for (int i = 1; i < point1.getX().length; i++)
+		{
+			sum += Math.pow((point1.getX())[i] - (point2.getX())[i], 2);
+		}
+		distance = Math.sqrt(sum);
+		
+		return distance;
+	}
+  
 }
